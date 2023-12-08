@@ -18,20 +18,8 @@ app.use(express.json());
 // Usar rutas
 app.use('/api/userscompany', usersCompanyRoutes);
 
-// Otros usos de rutas...
-app.get('/hola', async (req, res) => {
-    try {
-        const [results] = await db.query('SELECT * FROM UsersCompany');
-        res.json(results);
-    } catch (error) {
-        // Handle error
-        console.error(error);
-        res.status(500).send('An error occurred');
-    }
-});
 
-
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
