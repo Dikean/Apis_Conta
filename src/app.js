@@ -6,6 +6,7 @@ dotenv.config();
 
 // Importar rutas
 const usersCompanyRoutes = require('./routes/usersCompanyRoutes');
+const companysController = require('./routes/companysRoutes')
 const db = require('./utils/db');
 // Otros imports de rutas...
 
@@ -16,6 +17,7 @@ app.use(express.json());
 
 // Usar rutas
 app.use('/api/userscompany', usersCompanyRoutes);
+app.use('/api/companys', companysController);
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
