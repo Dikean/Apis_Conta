@@ -7,4 +7,6 @@ exports.allDataCompanys = async () => {
     } catch (error) {
         throw error;
     }
+
+    
 };
